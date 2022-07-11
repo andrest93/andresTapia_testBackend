@@ -1,8 +1,8 @@
 {
-  "name": "test-backend",
-  "version": "1.0.0",
-  "description": "Backend technical test with NestJS and TypeScript",
-  "author": "andres10-93@hotmail.com",
+  "name": "exercise-1",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
