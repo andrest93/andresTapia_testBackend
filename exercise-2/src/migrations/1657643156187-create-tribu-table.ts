@@ -17,7 +17,6 @@ export class createTribuTable1657643156187 implements MigrationInterface {
               {
                 name: 'id_organization',
                 type: 'int',
-                isUnique: true,
               },
               {
                 name: 'name',

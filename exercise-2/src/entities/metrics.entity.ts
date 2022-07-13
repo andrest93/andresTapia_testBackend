@@ -1,12 +1,17 @@
-import { PrimaryGeneratedColumn, Entity, Column, ManyToOne, PrimaryColumn } from 'typeorm';
+import { PrimaryGeneratedColumn, Entity, Column, ManyToOne, PrimaryColumn, JoinColumn, OneToOne } from 'typeorm';
 import { Repository } from './repository.entity';
 
 @Entity({ name: 'metrics', schema: 'public' })
 export class Metrics {
-  @PrimaryColumn()
+  
+  //@PrimaryColumn()
+  //id_repository: number;
+
+  @PrimaryColumn({ primary: false })
   id_repository: number;
 
-  @ManyToOne(() => Repository, repository => repository.metrics)
+  @OneToOne(() => Repository, repository => repository.metrics) //ok
+  @JoinColumn({ name: 'id_repository' })
   repository: Repository;
 
   @Column()

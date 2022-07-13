@@ -17,7 +17,6 @@ export class createRepositoryTable1657644398485 implements MigrationInterface {
                 {
                   name: 'id_tribe',
                   type: 'int',
-                  isUnique: true,
                 },
                 {
                   name: 'name',
@@ -31,7 +30,7 @@ export class createRepositoryTable1657644398485 implements MigrationInterface {
                   },
                 {
                   name: 'status',
-                  type: 'int',
+                  type: 'varchar',
                 },
                 {
                   name: 'create_time',

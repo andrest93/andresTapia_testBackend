@@ -10,7 +10,6 @@ export class createMetricsTable1657645001452 implements MigrationInterface {
                 {
                   name: 'id_repository',
                   type: 'int',
-                  isUnique: true,
                   isPrimary: true,
                   isGenerated: false,
                 },

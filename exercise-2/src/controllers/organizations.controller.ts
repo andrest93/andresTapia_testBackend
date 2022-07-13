@@ -7,8 +7,8 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
+import { OrganizationInterface } from 'src/commons/interfaces';
 import {
-  OrganizationInterface,
   OrganizationsService,
 } from '../services/organizations.service';
 

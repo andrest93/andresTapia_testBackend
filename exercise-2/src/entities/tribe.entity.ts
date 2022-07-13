@@ -1,4 +1,4 @@
-import { PrimaryGeneratedColumn, Entity, Column, ManyToOne, OneToMany } from 'typeorm';
+import { PrimaryGeneratedColumn, Entity, Column, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
 import { Organization } from './organization.entity';
 import { Repository } from './repository.entity';
 
@@ -7,10 +7,11 @@ export class Tribe {
   @PrimaryGeneratedColumn('identity')
   id: number;
 
-  @ManyToOne(() => Organization, organization => organization.tribes)
+  @ManyToOne(() => Organization, organization => organization.tribes)//ok
+  @JoinColumn({ name: 'id_organization' })
   organization: Organization;
 
-  @OneToMany(() => Repository, repository => repository.tribe)
+  @OneToMany(() => Repository, repository => repository.tribe)//ok
   repositories: Repository[];
 
   @Column({ type: 'varchar', length: 50 })

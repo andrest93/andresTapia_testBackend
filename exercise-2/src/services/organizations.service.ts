@@ -2,12 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Organization } from '../entities/organization.entity';
 import { Repository } from 'typeorm';
+import { OrganizationInterface } from 'src/commons/interfaces';
 
-export interface OrganizationInterface {
-  id?: number;
-  name: string;
-  status: number;
-}
 
 @Injectable()
 export class OrganizationsService {
